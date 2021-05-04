@@ -1,0 +1,20 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+{% load staticfiles %}
+
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<p>Полезные ссылки для вашего удобства</p>
+
+<p>
+<a href ="https://hoff.ru/" target="_blank"> <img src="{% static 'app/content/hoff.png' %}" alt="Logo 1"/></a>
+<a href ="https://www.gazprom.ru/" target="_blank"> <img src="{% static 'app/content/gaz.png' %}" alt="Logo 1"/></a>
+ <a href ="https://lukoil.ru/" target="_blank"> <img src="{% static 'app/content/luk.png' %}" alt="Logo 1"/></a>
+</p>
+
+
+
+{% endblock %}

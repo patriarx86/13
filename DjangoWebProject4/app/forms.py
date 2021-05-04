@@ -17,7 +17,7 @@ class BootstrapAuthenticationForm(AuthenticationForm):
     password = forms.CharField(label=_("Password"),
                                widget=forms.PasswordInput({
                                    'class': 'form-control',
-                                   'placeholder':'Пароль'}))
+                                   'placeholder':'Пароль '}))
 
 class AnketaForm(forms.Form):
     name = forms.CharField(label='Ваше имя', min_length=2, max_length=100)
@@ -27,7 +27,7 @@ class AnketaForm(forms.Form):
                             choices=[('1','Мужской'), ('2','Женский')],
                             widget=forms.RadioSelect, initial = 1)
     internet = forms.ChoiceField(label='Вы пользуетесь интернетом',
-                            choices=(('1','Каждый день'), ('2','Несколько раз в день'), ('3','Несколько раз в неделю'), ('4','Несколько раз в месяц')), initial = 1)
+                            choices=(('1','Каждый день'), ('2','Несколько раз в день.'), ('3','Несколько раз в неделю'), ('4','Несколько раз в месяц')), initial = 1)
     notice = forms.BooleanField(label='Получать новости на email?', required=False)
     email = forms.EmailField(label='Ваш email', min_length=7)
     message = forms.CharField(label='Немного о себе',widget=forms.Textarea(attrs={'rows':12,'cols':20}))
